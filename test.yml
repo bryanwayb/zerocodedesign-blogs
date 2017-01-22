@@ -1,0 +1,13 @@
+type: blog
+view:
+    title: Test Blog Post
+tags:
+    - test
+    - blog entry
+author: bryanwayb
+publish: false
+date: 2015/12/23
+body:
+  - content: text
+    text: |
+      Just a testing post, nothing special here excpet to show that the blog system works

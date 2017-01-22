@@ -1,0 +1,21 @@
+type: blog
+view:
+    title: Hello, World
+tags:
+    - Hello
+    - World
+    - Another Test
+date: 11-30-2016
+author: bryanwayb
+publish: false
+header:
+    image: /content/images/header-background.jpg
+    text: This is a bunch of text that should be rendered above the page content
+body:
+  - content: text
+    text: |
+      Hello there, yes I know. It's me again. This time I have some good news. I'm finally developing this site out a bit more with more of a focus on actually getting shit done.
+      There is going to be a lot of work, but it's going to be worth it. This blog is going to be the focus of my inner workings. Not so much a projection onto the world and how
+      I believe things should work. But instead a focus on my own self and constant improvement of a singular human mind.
+      
+      There is much to teach and much more to learn. If you feel the need to look something up, check out this site: http://google.com. It's been super helpful to me in the past :P

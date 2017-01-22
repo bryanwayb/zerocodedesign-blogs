@@ -1,0 +1,19 @@
+type: blog
+view:
+    title: Another Test
+tags:
+    - test
+date: 11-16-2016
+author: bryanwayb
+publish: false
+body:
+  - content: text
+    text: |
+      This is some example page text. No formatting or processing of any kind, just plain text. *markdown* doesn't have an effect here
+  - content: javascript
+    text: |
+      var exampleCode = 'This is some example code';
+      // Text in these blocks will be treated as code of whatever the 'content' string is.
+  - content:
+    text: |
+      Now *this* is markdown. See here, I can do things like **bold** my the text and whatnot.

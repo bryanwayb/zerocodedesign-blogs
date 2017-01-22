@@ -1,0 +1,40 @@
+type: blog
+view:
+    title: In With The New
+tags:
+    - General
+date: 1-20-2017
+author: bryanwayb
+publish: true
+header:
+    image: /content/images/out-with-the-old.jpg
+    text: ...nobody wants to read something that just colorizes what they likely already know.
+body:
+  - content:
+    text: |
+      Hello and welcome! Allow me to introduce myself and this site. My name is Bryan and I'm a software developer, although I prefer the term computer scientist for the sake of accuracy.
+      
+      This is ZeroCodeDesign, a website *slash* personal blogging platform *slash* the ~~masters~~ paladins guide. I built this site because I felt something was missing in my day to day life. I wanted a way to publish portions of my ideas and their end products. I wish to share, teach, document, and - most importantly - learn. And ZeroCodeDesign is the medium of which to do so.
+  - content:
+    text: |
+      ### What's In A Blog?
+
+      Something tells me that I'm not the first person in the world to use that subtitle in my first posting - but anyway - *continuing on!*
+      
+      ZeroCodeDesign actually used to have a different look and feel to it. In fact, it used to be a completely different website, complete with different postings. All of which have since been scrapped and lost into the digital world, survived only by web scrapping bots with nothing better to do than scrape data from what used to be a *pointless* blog.
+      
+      Why do I say this? What do I mean by *pointless*, you ask?
+      
+      First off, in order for an article posting to be of value it has to convey not just accurate information, but also **worthwhile** information. This is why the previous site failed, and where I've found myself refining myself for improvements. The fact is, nobody wants to read something that just colorizes what they *likely* already know.
+      
+      Secondly, hindsight is 20/20. When I started my previous blog, I did so with good intentions, but ended up abandoning it early on because of a single specific issue - I was too preoccupied with writing code and never documenting the things that could be shared with the public on things I did to achieve the things which were done. This basically drills down to process.
+      
+      Lastly, and this is more of a personal preference, I'm not a huge fan of WordPress as a publishing platform. There's a large collection of reasons why I don't - which I won't get into in this post. This eventually led me to writing the software that is used to create and publish on this site.
+      
+      ### What's In This Blog?
+      
+      Well, that I can't say for sure. I have quite a bit of articles partially written and even a few that reach the rare status of being "completed".
+      
+      What I can say is that I've gotten much better over the last few years at identifying things which may benefit others by being shared. I also have a planned series coming up soon documenting the process of building scalable applications from the ground up, going into details on why some decisions     were made along the way to balance performance and maintainability.
+      
+      But I'm really getting ahead of myself here, I'm still in the process of introducing the blog to you! Well, I hope you enjoy your time digging through everything here there is to learn and read up on.
