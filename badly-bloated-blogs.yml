@@ -1,0 +1,53 @@
+type: blog
+view:
+    title: Badly Bloated Blogs (And How To Avoid Them)
+tags:
+    - General
+date: 2-6-2017
+author: bryanwayb
+publish: true
+header:
+    text: Now here's a really good question: why should a blog article be a dynamic page when the article content itself isn't subject to change per request?
+body:
+  - content:
+    text: |
+      A few weeks ago I contributed my first entry to the blog. This may not seem like much to most people (actually I should say *everyone*), but this was a large deal for me because it meant that the sites build is in a stable enough state for public use. So - being the milestone that it was - I ran the publish script, broke out a drink, and relaxed for a few minutes as I knew the hardest part was behind me.
+      
+      As I was describing the site to a cohort the next day he asked me a simple question: why go through the trouble of building a blog platform from scratch?
+      
+      Well, good friend, I'm glad you asked. Let me show you in detail.
+  - content:
+    text: |
+      ### Static vs. Dynamic Pages
+      
+      A lot of people tend to blow off the difference between a static page and a dynamic page because of how minuscule the performance differences are. But are the differences really that minor? Truth is, it depends.
+      
+      If you're serving a static file the web server should be handling the process of loading the file, handling any compression and encryption needed, then writing the buffer to the TCP socket connection and continuing on its merry way. Simple enough, right?
+      
+      So then ideally, if you're serving a dynamic file the process should be more or less the same just instead of reading a file off the filesystem the web server would instead be handed the content from some server side application that runs upon a page request. I say *ideally*, because that's not exactly the case in every situation.
+      
+      What makes dynamic content a variable factor? Well namely the runtime environment the dynamic page is being generated in. It's no secret that not every runtime environment is built to the same standards and some fare poorly in comparison to other runtimes. For example, PHP get's absolutely obliterated in comparison to the performance of .NET/Mono ASP because of just-in-time compilation, but I digress.
+      
+      Basically put, static content should be for serving pages that shouldn't change per request, where dynamic pages are there to allow for page generation on the fly.
+      
+      ### What's In A Blog Article
+      
+      Now here's a really good question: why should a blog article be a dynamic page when the article content itself isn't subject to change per request?
+      
+      This is the primary reason why I'm not a fan of using existing blog platforms that I can self host. It really makes you wonder why the system needs to constantly generate a page for a page that shouldn't change too often. To add on that, some blogging platforms access database tables upon each page request, fetching the **same data**. The most well-known of these kinds of offenders is WordPress, which is currently written in PHP using MySQL as its database. It literally makes no sense to do something like this when your system is supposed to be the primary point of data entry and retrieval, you would think this sense of ownership would eliminate the need to constantly query article data.
+      
+      When I first began development of this site I was actually going to use WordPress. After configuring my server with MySQL, Apache, and PHP and configuring the default configs to match my RAM and environment needs I set off on an attempt to get a simple WordPress blog running. Event with all the fine tuning I did, average page load for a WordPress site clocked in around half a second, with no cache plugins added to the mix...
+      
+      Now I'm not writing this article to bash on WordPress. It's true that it cannot handle as heavy of a load without some beefed up hardware, but my goal isn't to bring its flaws to light as that does nothing for my point. I'm simple stating this is a prime example of architectural flaws, and what I aimed at fixing in the development of my own blog system.
+      
+      Now there are a few features that are missing here that are prevalent in most blog platforms, two of the major ones are admin controls and comments. But these aren't features that I'm exactly keen on having at the moment, and quite honestly there are plenty of other methods to implement these with use of building API endpoints.
+      
+      So, I had identified the primary problem - page performance. The longer someone had to wait for a page to load in the more chance I had of them determining that the content wasn't worth the wait. Which leads to wasted resources and that wouldn't make anyone happy.
+      
+      ### Write, Review, Publish, Repeat
+      
+      Eventually I needed use of a static site generator for a different project. One thing led into another and after a bit of development I came out on the other side with [staticshock](https://github.com/bryanwayb/staticshock). Like other static site generators, this tool transformed files into actual HTML pages to be served up by web servers. The difference with this was that I had purposefully made it extremely configurable.
+      
+      Using staticshock, I ended up with the foundation for the build structure of ZeroCodeDesign. Every time I add an article, the site goes through the build process to dynamically create the site and save to disk, waiting to requested through the web server. It is here where I can perform all the optimizations that I need to, such as HTML/CSS/JS minification, image/file compression, and even above-the-fold optimizations.
+      
+      One byproduct of doing my publishing this way is it gives me the advantage of controlling my blog postings through Git. I've created a [Git repository on GitHub](https://github.com/bryanwayb/zerocodedesign-blogs) where the source YAML documents for every blog posting can be viewed. In fact, if you'd like to take part in the site as well, feel free to fork the repo and make a pull request with your article. As long as it's nothing off topic, I'll be more than happy to publish it!
