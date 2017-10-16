@@ -5,10 +5,7 @@ tags:
     - General
 date: 1-20-2017
 author: bryanwayb
-publish: true
-header:
-    image: /content/images/out-with-the-old.jpg
-    text: ...nobody wants to read something that just colorizes what they likely already know.
+publish: false
 body:
   - content:
     text: |

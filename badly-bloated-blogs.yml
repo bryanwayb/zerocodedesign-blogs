@@ -5,9 +5,7 @@ tags:
     - General
 date: 2-6-2017
 author: bryanwayb
-publish: true
-header:
-    text: "Now here's a really good question: why should a blog article be a dynamic page when the article content itself isn't subject to change per request?"
+publish: false
 body:
   - content:
     text: |
